@@ -169,16 +169,17 @@ footer p {
 @media (max-width: 480px) {
     #menu {display: flex;}
     header nav {
-        padding-left: 32px;
+        padding: 64px 32px;
         position: fixed;
         top: 60px;
         right: 0;
-        width: 200px;
-        height: 500px;
+        width: 100dvw;
+        height: calc(100dvh - 60px);
         display: none;
         flex-flow: column;
         align-items: start;
-        justify-content: space-evenly;
+        justify-content: start;
+        gap: 64px;
         background-color: var(--color-primary);
     }
     header nav.open {display: flex;}

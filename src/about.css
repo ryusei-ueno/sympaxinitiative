@@ -1,0 +1,98 @@
+.background {
+    position: fixed;
+    width: 100dvw;
+    height: 100dvh;
+    z-index: -1;
+    background-color: var(--color-primary);
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.background img {
+    position: absolute;
+    max-width: 400px;
+    z-index: -1;
+}
+
+.background h2 {
+    width: fit-content;
+    text-align: center;
+    font-size: 3rem;
+    color: transparent;
+    background: linear-gradient(45deg, white 80%, gray);
+    background-clip: text;
+    margin-bottom: 20px;
+}
+
+.background p {
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+}
+
+.introduction {
+    padding: 60px 20px;
+    margin-top: 60px;
+    width: 100dvw;
+    background-color: var(--color-primary);
+    display: flex;
+    justify-content: space-between;
+}
+
+.introduction .textWrapper {
+    max-width: 800px;
+    display: flex;
+    flex-flow: column;
+    align-items: start;
+    justify-content: center;
+}
+
+.introduction .textWrapper h2{
+    font-size: 3rem;
+    color: var(--color-secondary);
+    margin-bottom: 20px;
+}
+
+.introduction .textWrapper p {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.introduction img {max-width: 400px;}
+@media (max-width: 850px) {.introduction img {display: none;}}
+
+#missionVision {
+    padding: 80px 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Automatically adjusts based on screen size */
+    gap: 30px;
+    background-color: #f8f8f8;
+}
+
+#missionVision .card {
+    padding: 20px;
+    display: flex;
+    flex-flow: column;
+    text-align: start;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+#missionVision .card:hover {background-color: rgba(84, 194, 255, 0.1);}
+
+#missionVision .card h2 {
+    margin-bottom: 10px;
+    font-size: 2rem;
+    color: var(--color-primary);
+}
+
+#missionVision .card p {
+    color: #666;
+    font-size: 1.5rem;
+}
+
+#missionVision .card p strong {color: var(--color-secondary);}
