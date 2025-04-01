@@ -47,7 +47,10 @@
     font-size: 1.5rem;
 }
 
-#joinDiscord img {max-width: 500px;}
+#joinDiscord img {
+    width: 300px;
+    max-width: 500px;
+}
 
 .discordButton {
     display: inline-block;
