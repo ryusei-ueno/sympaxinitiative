@@ -33,13 +33,13 @@
     width: fit-content;
     font-size: 3rem;
     color: transparent;
-    background: linear-gradient(45deg, white, var(--color-secondary));
+    background: linear-gradient(45deg, var(--color-white), var(--color-secondary));
     background-clip: text;
 }
 
 #hero .textWrapper p {
     color: transparent;
-    background: linear-gradient(45deg, white 80%, gray);
+    background: linear-gradient(45deg, var(--color-white) 80%, gray);
     background-clip: text;
     font-size: 2rem;
     font-style: italic;
@@ -52,7 +52,7 @@
     width: 200px;
     height: 50px;
     background-color: var(--color-secondary);
-    color: white;
+    color: var(--color-white);
     font-size: 1.5rem;
     font-weight: bold;
     border: none;
@@ -94,17 +94,18 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+    background-color: var(--color-white);
 }
   
 #about h2 {
     font-size: 3rem;
-    color: #333;
+    color: var(--color-black);
     margin-bottom: 20px;
 }
   
 #about .description {
     font-size: 1.5rem;
-    color: #666;
+    color: var(--color-offblack);
     margin-bottom: 40px;
     max-width: 800px;
 }
@@ -117,7 +118,7 @@
 }
   
 #about .coreValues .valueCard {
-    background-color: #f8f8f8;
+    background-color: var(--color-white);
     padding: 20px;
     width: 200px;
     border-radius: 8px;
@@ -137,24 +138,24 @@
 #about .coreValues .valueCard h3 {
     margin: 10px 0;
     font-size: 2rem;
-    color: #333;
+    color: var(--color-black);
 }
   
 #about .coreValues .valueCard p {
-    color: #666;
+    color: var(--color-offblack);
     font-size: 1.5rem;
 }
 
 .whyJoinJoint {
     width: 100dvw;
     height: 20px;
-    background: linear-gradient(180deg, transparent, #f4f4f4);
+    background: linear-gradient(180deg, var(--color-white), var(--color-offwhite));
 }
 
 #whyJoin {
     padding: 80px 20px;
     text-align: center;
-    background-color: #f4f4f4;
+    background-color: var(--color-offwhite);
 }
 
 #whyJoin h2 {
@@ -165,7 +166,7 @@
 
 #whyJoin .description {
     font-size: 1.5rem;
-    color: #666;
+    color: var(--color-offblack);
     margin-bottom: 40px;
 }
 
@@ -181,7 +182,7 @@
     flex-flow: column;
     text-align: start;
     border-radius: 8px;
-    background-color: white;
+    background-color: var(--color-white);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s;
 }
@@ -194,7 +195,7 @@
 }
 
 #whyJoin .whyJoinList .whyJoinItem p {
-    color: #666;
+    color: var(--color-offblack);
     font-size: 1.5rem;
 }
 
@@ -205,7 +206,7 @@
     align-items: center;
     justify-content: center;
     background-color: var(--color-primary);
-    color: white;
+    color: var(--color-white);
     text-align: center;
 }
   
@@ -224,7 +225,7 @@
     width: 200px;
     height: 50px;
     background-color: var(--color-secondary);
-    color: white;
+    color: var(--color-white);
     font-size: 1.5rem;
     font-weight: bold;
     border: none;
@@ -254,6 +255,6 @@
     #hero .textWrapper h1 {text-align: center;}
     #hero .textWrapper p {
         text-align: center;
-        color: white;
+        color: var(--color-white);
     }
 }

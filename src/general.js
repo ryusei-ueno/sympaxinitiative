@@ -8,7 +8,11 @@ window.onload = function () {
 
 // Click logo to navigate user to index.html
 document.getElementById('logo').addEventListener('click', function() {
-    window.location.href = 'index.html'
+    if (window.location.pathname.endsWith('/index.html') || window.location.pathname === '/' || window.location.pathname === '/index') {
+        window.location.href = 'index.html';
+    } else {
+        window.location.href = '../index.html';
+    }
 })
 
 // Toggle the menu visibility on click

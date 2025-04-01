@@ -1,0 +1,93 @@
+#contact {
+    margin-top: 60px;
+    padding: 80px 40px;
+    max-width: 100dvw;
+    background-color: var(--color-primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: var(--color-white);
+}
+
+p {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    color: var(--color-offwhite);
+    text-align: center;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    gap: 20px;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+label {
+    font-size: 1.5rem;
+    color: var(--color-white);
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.5rem;
+    border: 1px solid var(--color-offwhite);
+    border-radius: 5px;
+}
+
+textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+button {
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+    font-size: 1.5rem;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {background-color: var(--color-accent);}
+
+/* Responsive for Tablets and Larger Screens */
+@media (min-width: 1024px) {
+    form {
+        max-width: 800px;
+        flex-flow: row wrap;
+    }
+
+    label, input, textarea {flex: 1 1 calc(50% - 10px);}
+
+    #subject, #message {flex: 1 1 100%;}
+
+    button {flex: 1 1 calc(50% - 10px);}
+}
+
+/* Responsive for Smaller Screens */
+@media (max-width: 600px) {
+    form {padding: 0 20px;}
+
+    label {font-size: 1.2rem;}
+
+    input, textarea {
+        font-size: 1.2rem;
+        padding: 10px;
+    }
+
+    button {
+        font-size: 1.2rem;
+        padding: 10px;
+    }
+}

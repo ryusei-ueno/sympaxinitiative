@@ -2,6 +2,10 @@
     --color-primary: rgb(7, 3, 31);
     --color-secondary: rgb(84, 194, 255);
     --color-accent: rgb(166, 124, 255);
+    --color-white: #f8f8f8;
+    --color-offwhite: #f4f4f4;
+    --color-black: #333;
+    --color-offblack: #666;
 }
 
 * {
@@ -12,6 +16,7 @@
 }
 
 html {font-size: 10px;}
+body {background-color: var(--color-primary);}
 
 /* Loader styles */
 .loader {
@@ -85,7 +90,7 @@ header nav {
 
 header nav a {
     text-decoration: none;
-    color: white;
+    color: var(--color-white);
     font-weight: 900;
     font-size: 2rem;
 }
@@ -104,7 +109,7 @@ header nav a:hover {color: var(--color-secondary);}
 #menu .bar {
     width: 30px;
     height: 2px;
-    background-color: white;
+    background-color: var(--color-white);
     transition: all 0.3s;
 }
 #menu.open .bar:nth-child(1) {
@@ -135,9 +140,8 @@ footer .footerWrapper {
     justify-content: space-around;
     margin-bottom: 40px;
 }
-footer .footerWrapper img {
-    width: 100px;
-}
+
+footer .footerWrapper img {width: 100px;}
 
 footer .footerWrapper .legal {
     height: 100%;
@@ -148,12 +152,12 @@ footer .footerWrapper .legal {
 
 footer .footerWrapper .legal a {
     text-decoration: none;
-    color: white;
+    color: var(--color-white);
     font-size: 1.5rem;
 }
 
 footer p {
-    color: white;
+    color: var(--color-white);
     font-size: 1.5rem;
     text-align: center;
 }

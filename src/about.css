@@ -3,7 +3,6 @@
     width: 100dvw;
     height: 100dvh;
     z-index: -1;
-    background-color: var(--color-primary);
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -22,7 +21,7 @@
     text-align: center;
     font-size: 3rem;
     color: transparent;
-    background: linear-gradient(45deg, white 80%, gray);
+    background: linear-gradient(45deg, var(--color-white) 80%, gray);
     background-clip: text;
     margin-bottom: 20px;
 }
@@ -30,10 +29,11 @@
 .background p {
     text-align: center;
     font-size: 2rem;
-    color: white;
+    color: var(--color-white);
 }
 
 .introduction {
+    position: relative;
     padding: 60px 20px;
     margin-top: 60px;
     width: 100dvw;
@@ -48,6 +48,7 @@
     flex-flow: column;
     align-items: start;
     justify-content: center;
+    z-index: 0;
 }
 
 .introduction .textWrapper h2{
@@ -58,18 +59,80 @@
 
 .introduction .textWrapper p {
     font-size: 1.5rem;
-    color: white;
+    color: var(--color-white);
 }
 
-.introduction img {max-width: 400px;}
+.introduction img {
+    z-index: 0;
+    max-width: 400px;
+}
 @media (max-width: 850px) {.introduction img {display: none;}}
+
+#whysympax {
+    padding: 80px 40px;
+    background-color: var(--color-white);
+}
+
+#whysympax h2 {
+    color: var(--color-black);
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+#whysympax p {
+    font-size: 1.5rem;
+    color: var(--color-offblack);
+}
+
+#whysympax p strong {color: var(--color-secondary);}
+
+#whysympax .name {
+    margin: 20px 0;
+    padding: 10px 0 10px 20px;
+    display: flex;
+    flex-flow: column;
+    align-items: start;
+    justify-content: center;
+    border-left: 5px solid var(--color-accent);
+    background: linear-gradient(90deg, var(--color-offwhite), transparent);
+}
+
+#whysympax .name .nameText {
+    font-size: 3rem;
+    font-style: italic;
+    font-weight: 900;
+    color: var(--color-accent);
+    transform: skew(-10deg);
+}
+#whysympax .name .nameText:nth-child(2) {transform: skew(-20deg);}
+
+.missionVisionJoint {
+    width: 100dvw;
+    height: 20px;
+    background: linear-gradient(var(--color-white), var(--color-offwhite));
+}
 
 #missionVision {
     padding: 80px 40px;
+    background-color: var(--color-offwhite);
+}
+
+#missionVision h2 {
+    margin-bottom: 20px;
+    font-size: 3rem;
+    color: var(--color-black);
+}
+
+#missionVision .description {
+    margin-bottom: 40px;
+    font-size: 1.5rem;
+    color: var(--color-offblack);
+}
+
+#missionVision .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Automatically adjusts based on screen size */
     gap: 30px;
-    background-color: #f8f8f8;
 }
 
 #missionVision .card {
@@ -78,7 +141,7 @@
     flex-flow: column;
     text-align: start;
     border-radius: 8px;
-    background-color: white;
+    background-color: var(--color-white);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s;
 }
@@ -87,12 +150,116 @@
 #missionVision .card h2 {
     margin-bottom: 10px;
     font-size: 2rem;
-    color: var(--color-primary);
+    color: var(--color-black);
 }
 
 #missionVision .card p {
-    color: #666;
+    color: var(--color-offblack);
     font-size: 1.5rem;
 }
 
 #missionVision .card p strong {color: var(--color-secondary);}
+
+.founderJoint {
+    width: 100dvw;
+    height: 40px;
+    background: linear-gradient(transparent, var(--color-primary));
+}
+
+#message {
+    padding: 80px 40px;
+    background-color: var(--color-primary);
+    text-align: center;
+}
+
+#message h2 {
+    font-size: 3rem;
+    margin-bottom: 40px;
+    color: var(--color-white);
+}
+
+#message .founderContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+#message .founderContainer .founderImage {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--color-secondary);
+}
+
+#message .founderContainer .founderText {
+    flex: 1;
+    text-align: left;
+}
+
+#message .founderContainer .founderText p {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color: var(--color-white);
+    margin-bottom: 20px;
+}
+
+#message .founderContainer .founderText strong {
+    font-size: 1.3rem;
+    color: var(--color-secondary);
+}
+
+#cta {
+    padding: 80px 20px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    text-align: center;
+}
+  
+#cta h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+  
+#cta p {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+}
+  
+#cta .ctaButton {
+    margin-top: 16px;
+    width: 200px;
+    height: 50px;
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 2px 10px var(--color-secondary);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+#cta .ctaButton:hover {
+    background-color: var(--color-accent);
+    box-shadow: 0 2px 10px var(--color-accent);
+    transform: translateY(-3px);
+}
+#cta .ctaButton:active {transform: translateY(1px);}
+
+@media (max-width: 768px) {
+    .founderContainer {
+        flex-direction: column;
+        text-align: center;
+    }
+    .founderImage {margin-bottom: 20px;}
+    .founderText {text-align: center;}
+}

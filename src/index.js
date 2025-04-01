@@ -10,14 +10,14 @@ let maxParticles = 200;   // Default max particle count
 let connectionDistance = 150; // Default connection distance
 let particlesCreated = false; // Flag to track if particles have been created already
 
-const heroSection = document.querySelector('.networkBackground');
+const networkBg = document.querySelector('.networkBackground');
 
 function createParticles() {
     // Only create particles if the canvas is in the DOM
-    if (!heroSection) return;
+    if (!networkBg) return;
 
-    canvas.width = heroSection.offsetWidth;
-    canvas.height = heroSection.offsetHeight;
+    canvas.width = networkBg.offsetWidth;
+    canvas.height = networkBg.offsetHeight;
 
     // Position canvas fixed within the hero section, so it won't move during scrolling
     canvas.style.position = 'absolute';
@@ -25,7 +25,7 @@ function createParticles() {
     canvas.style.left = '0';
     canvas.style.zIndex = '-1'; // Make sure it's behind content
 
-    heroSection.appendChild(canvas);
+    networkBg.appendChild(canvas);
 
     const fixedColor = 'rgba(84, 194, 255, 0.5)';
 
@@ -109,9 +109,9 @@ window.addEventListener('resize', () => {
     clearTimeout(resizeTimeout);
     resizeTimeout = setTimeout(() => {
         // Only reset and recreate particles if the width is significantly changed
-        if (canvas.width !== heroSection.offsetWidth || canvas.height !== heroSection.offsetHeight) {
-            canvas.width = heroSection.offsetWidth;
-            canvas.height = heroSection.offsetHeight;
+        if (canvas.width !== networkBg.offsetWidth || canvas.height !== networkBg.offsetHeight) {
+            canvas.width = networkBg.offsetWidth;
+            canvas.height = networkBg.offsetHeight;
             animateParticles(); // Reanimate particles on resize
         }
     }, 200); // Delay the resize action to prevent constant calls
