@@ -1,0 +1,62 @@
+#howtoJoin {
+    margin-top: 60px;
+    padding: 80px 40px;
+    width: 100dvw;
+    height: fit-content;
+}
+
+#howtoJoin h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: var(--color-white);
+}
+
+#howtoJoin p {
+    color: var(--color-offwhite);
+    font-size: 1.5rem;
+}
+
+#howtoJoin ol li a {color: var(--color-secondary);}
+
+#howtoJoin ol {
+    margin: 20px 0;
+    padding-left: 20px;
+    color: var(--color-offwhite);
+    font-size: 1.5rem;
+}
+
+#joinDiscord {
+    margin-top: 60px;
+    padding: 80px 40px;
+    width: 100dvw;
+    height: fit-content;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 40px;
+}
+
+#joinDiscord h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: var(--color-white);
+}
+
+#joinDiscord p {
+    color: var(--color-offwhite);
+    font-size: 1.5rem;
+}
+
+#joinDiscord img {max-width: 500px;}
+
+.discordButton {
+    display: inline-block;
+    padding: 15px 25px;
+    background-color: #5865F2;
+    color: #E0E3FF;
+    font-size: 2rem;
+    font-weight: 900;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+}
