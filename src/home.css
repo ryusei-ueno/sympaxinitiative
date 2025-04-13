@@ -158,6 +158,8 @@
     background-color: var(--color-offwhite);
 }
 
+#whyJoin strong {color: var(--color-secondary);}
+
 #whyJoin h2 {
     font-size: 3rem;
     color: var(--color-primary);

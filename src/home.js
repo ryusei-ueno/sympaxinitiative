@@ -13,17 +13,14 @@ let particlesCreated = false; // Flag to track if particles have been created al
 const networkBg = document.querySelector('.networkBackground');
 
 function createParticles() {
-    // Only create particles if the canvas is in the DOM
     if (!networkBg) return;
 
     canvas.width = networkBg.offsetWidth;
     canvas.height = networkBg.offsetHeight;
-
-    // Position canvas fixed within the hero section, so it won't move during scrolling
     canvas.style.position = 'absolute';
     canvas.style.top = '0';
     canvas.style.left = '0';
-    canvas.style.zIndex = '-1'; // Make sure it's behind content
+    canvas.style.zIndex = '-1';
 
     networkBg.appendChild(canvas);
 
@@ -41,8 +38,6 @@ function createParticles() {
     Particle.prototype.update = function() {
         this.x += this.speedX;
         this.y += this.speedY;
-
-        // Prevent particle size from becoming too small
         if (this.size > 0.2) this.size -= 0.1;
     };
 
@@ -84,7 +79,7 @@ function createParticles() {
     }
 
     function createParticlesOnce() {
-        if (particlesCreated) return; // Don't create particles again if already created
+        if (particlesCreated) return;
 
         for (let i = 0; i < particleCount; i++) {
             particles.push(new Particle());
@@ -95,26 +90,21 @@ function createParticles() {
             }
         }, 1000);
         animateParticles();
-
-        particlesCreated = true; // Set the flag to true after particles are created
+        particlesCreated = true;
     }
-
-    // Initialize particles (only create once)
     createParticlesOnce();
 }
 
-// Only adjust particles on significant resize, not during every window resize
 let resizeTimeout;
 window.addEventListener('resize', () => {
     clearTimeout(resizeTimeout);
     resizeTimeout = setTimeout(() => {
-        // Only reset and recreate particles if the width is significantly changed
         if (canvas.width !== networkBg.offsetWidth || canvas.height !== networkBg.offsetHeight) {
             canvas.width = networkBg.offsetWidth;
             canvas.height = networkBg.offsetHeight;
-            animateParticles(); // Reanimate particles on resize
+            animateParticles();
         }
-    }, 200); // Delay the resize action to prevent constant calls
+    }, 200);
 });
 
 // Function to handle media query matches
@@ -124,7 +114,7 @@ function handleMediaQueryChange(e) {
         createParticles();
     } else {
         // If the media query does not match (width < 650px), remove particles or hide canvas
-        canvas.style.display = 'none'; // Hides the canvas when screen size is smaller than 650px
+        canvas.style.display = 'none';
     }
 }
 

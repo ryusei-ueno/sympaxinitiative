@@ -4,29 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Sympax Initiative</title>
-    <link rel="stylesheet" href="general.css">
-    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="/src/general.css">
+    <link rel="stylesheet" href="/src/contact.css">
 </head>
 <body>
     <div id="loader" class="loader"></div>
     
-    <header>
-        <div class="textWrapper">
-            <img src="../Images/logo.svg" alt="Sympax Initiative logo featuring a face on the left with a line drawing from bottom left to top right." id="logo">
-            <span>Sympax Initiative</span>
-        </div>
-        <div id="menu"> <!-- for a small screen -->
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
-        <nav>
-            <a href="../index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="join.html">Join</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
+    <header></header>
 
     <section id="contact">
         <h2>Get in Touch</h2>
@@ -50,18 +34,9 @@
         </form>
     </section>
 
-    <footer>
-        <div class="footerWrapper">
-            <div class="legal">
-                <a href="../Documents/privacypolicy.txt">Privacy Policy</a>
-                <a href="../Documents/termsofservice.txt">Terms of Service</a>
-            </div>
-            <img src="../Images/logowithname.svg" alt="Sympax Initiative logo featuring a face on the left with a diagonal line extending from the bottom left to the top right, and the brand name at the bottom.">
-        </div>
-        <p>&copy 2025 Sympax Initiative. <span style="display: inline-block;">All Rights Reserved.</span></p>
-    </footer>
+    <footer></footer>
 
-    <script src="general.js"></script>
+    <script src="/src/general.js"></script>
     <script>
         document.getElementById('contact').onsubmit = async function(event) {
             event.preventDefault();
@@ -75,7 +50,7 @@
                 });
 
                 if (response.ok) {
-                    window.location.href = 'https://sympaxinitiative.com/thankyou.html';
+                    window.location.href = '/src/thankyou.html';
                 } else {
                     alert('There was a problem with your submission. Please try again.');
                 }
