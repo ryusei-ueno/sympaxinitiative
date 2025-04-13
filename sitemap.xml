@@ -3,18 +3,21 @@
     <url>
         <loc>https://sympaxinitiative.com/src/home.html</loc>
         <priority>1.0</priority>
+        <lastmod>2025-04-13</lastmod>
     </url>
     <url>
         <loc>https://sympaxinitiative.com/src/about.html</loc>
         <priority>0.8</priority>
+        <lastmod>2025-04-13</lastmod>
     </url>
     <url>
         <loc>https://sympaxinitiative.com/src/join.html</loc>
         <priority>0.6</priority>
+        <lastmod>2025-04-13</lastmod>
     </url>
     <url>
         <loc>https://sympaxinitiative.com/src/contact.html</loc>
         <priority>0.6</priority>
+        <lastmod>2025-04-13</lastmod>
     </url>
 </urlset>
-<lastmod>2025-04-13</lastmod>
